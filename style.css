@@ -1,4 +1,165 @@
+/* import special font-family from font.googl.com--montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@400;500;700&display=swap');
+/* by defualt whole webpage should be without margin and padding but content,padding and border will be in the width and height properties---box-sizing:border-box */
 *{
     margin:0;
     padding: 0;
+    box-sizing: border-box;
+}
+/* wholy webpage use this font as the :default tag that is imported from font.google.com */
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+/*--------- common css styliing--------
+---------------------------------------- */
+
+/*contents maximum width more than 1200px will get margin 0 both sides
+so that two sides of the screen has some gaps and also less than 1200px 
+also get some padding so that it wont mixed with screen sidewall */
+.container{
+    max-width: 1200px;
+    margin:0 auto;
+    padding:0 30px;
+}
+/* using highlihgt class to highlight a part of the p tag */
+.highlight{
+    color:#FF008E;
+}
+/* change the section title position to the centre */
+.section-title{
+    text-align: center;
+}
+.section-title h2{
+    font-size: 40px;
+    border-bottom: 2px solid #FF008E;/*getting an border 2px thin under the content*/
+    display: inline-block;   /*the border will be according to height of the content*/
+    text-transform: uppercase; /*change lowercase font to uppercase*/
+    margin: 50px 0;            /*give space up and down to the content*/
+}
+/*outside every content there is an outline and a border which should be 0
+padding up down left right, font size, color,font change lower to uppercase
+border-radius for curving angle around corner,cursor like pointer */
+.primary-button{
+    outline:0; 
+    border:0;
+    padding: 10px 15px;
+    background-image: linear-gradient(90deg,#ec66b063,#FF008E);
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor:pointer;
+    box-shadow: 0 5px 0 #b10664; /*shadow box which is up down left right deep and color value*/
+    position: relative;/*position relative to its normal position*/
+    top:0; /*value of the top position of the button*/
+}
+/* when clicking the button 3d effect will take effect by moving from top and changing box-shadow size */
+.primary-button:active{
+    top:5px;
+    box-shadow: 0 2px 0 #b10664;
+}
+header{
+    
+    background-image: url(./images/cloud.png);
+    background-repeat: no-repeat;    /*if image is small it can repeat so for no repeat */
+    background-size: cover;          /*if width cant cover the full background then*/   
+    background-color: rgba(0 0 0 .65); /*make BG light black with opacity value.65*/
+    background-blend-mode: overlay; /* cover the background with the coating ie overlay*/
+}
+
+/* now arrange content side by side by this flex command and justify content as well
+as align items vertically height is essential */
+nav{
+    display: flex;
+    justify-content: space-between ;
+    height: 80px;
+    align-items:center;
+}
+/* now arrange the menu icon side by side by display flex of class navigation */
+.navigation{
+    display: flex;
+}
+/* remove any type of styling with the <li> tag like bold marking and add margin so that
+the manues creat space between them  */
+.navigation li{
+    list-style: none;
+    margin:15px;
+ }
+    /* change color remove underline and make bold and make space around the anchor tag values */
+.navigation li a{
+    color:#fff;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 10px 10px;
+}
+/* for responsive design grid used as flex but for large background for smaller image flex can be used and grid-templete-columns: 1fr 1fr----arrange this content side by side horizonatally 50% 1fr 1fr */
+.banner{
+    height:calc(100vh-80px);   /* vh means viewport height ie- 100% of secreen height*/
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.banner-left{
+    display:flex;           /*arrange items of left display side by side*/
+    flex-direction: column; /*arrange items vertically*/
+    justify-content: center; /*arrange items in the middle of the scrren vertically*/
+    align-items: flex-start; /*arrange items as the start from the begining */
+}
+/* change the style of p tag in banner left with color font size line spacing and margin up and down */
+.banner-left p{
+    color: rgb(53, 3, 3);
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 20px 0;
+}
+.banner-left h1{
+    font-size: 45px;
+    color:#fff;
+}
+.banner-right{
+    display: flex;
+    justify-content: center;
+    flex-direction:flex-end;    /*arrange items at the end of the flex */
+} 
+.banner-right img{
+    width:100%; /*make the image adjusted to screens right portaion */
+}
+/*----------feature part css
+---------------------------- */
+/* all content in feature class arrange side by side by display:grid creat gap between the content and grid arrange side by side sharing same amount of place by using grid-templete-columns:1fr 1fr,content centering by justify-content */
+.feature{
+    display: grid;
+    gap:30px;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+}
+/* to separate the card contents properly we use width and padding and box shadow for showing the shadow as a box */
+.card{
+    width:300px;
+    padding:30px;
+    margin: 0 auto;
+    box-shadow: 0 30px 30px rgba(0,0,0,.20);
+}
+/* fot styling the downloaded font---font background color,fonts rounded shape,fonts height width,padding and font color   */
+.card .card-icon{
+    background-color: #FF008E;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    padding: 10px;
+    color: #fff;
+}
+/* change heading 3 font color and font size */
+.card h3{
+    color: #FF008E;
+    font-size: 25px;
+}
+/* change paragraph up and down spacing and height between the lines */
+.card p{
+    margin:10px 0;
+    line-height: 1.5;
+}
+/* change the anchor tag design by removing the text underlying--text-decoration and change color to give base color */
+.card a{
+    text-decoration: none;
+    color: #FF008E;
 }

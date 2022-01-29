@@ -1,15 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- in head css stylesheet was imported form external style.css file -->
+<!--copy the kit from fontawsome site and paste it into <head> tag also copy the desired font into the specfic used place with <i> tag-->
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/3f4689b0d8.js" crossorigin="anonymous"></script>
     <title>Conceptual-3></title>
 </head>
+<!-- in body there is <header> which will contain all the tag, in <header> there is 
+<nav> container, in <nav> there is <div> logo with <img>,in <nav> container there is
+    <ul> navigation,in <ul> navigation there is 5 <li> each with anchor tag with 
+        different menu name  -->
 
 <body>
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <img src="./images/logo.png" alt="">
+            </div>
+            <Ul class="navigation">
+                <li><a href="">Home</a></li>
+                <li><a href="">Feature</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Galary</a></li>
+                <li><a href="">Contact</a></li>
+                <Ul>
+        </nav>
+        <!-- in <header> there is <section> container,in <section> container there is <div> banner where there is two more <div> named banner-left, banner-right
+        <div> banner left containe <h1> and <p> and <button> primary-button and <div>
+        banner-right contains image source-->
+        <section class="container">
+            <div class="banner">
+                <div class="banner-left">
+                    <h1>Cartoons And Anime Series Stream Anytime On<span class="highlight"> Cosmic World</span></h1>
+                    <!--use span tag with class highlight to highlight cosmic world-->
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam ut minima magnam
+                        reprehenderit, at ab magni cumque quos veniam quas?</p>
+                    <button class="primary-button">Browse Now</button>
+                </div>
+                <div class="banner-right">
+                    <img src="./images/banner.png" alt="">
+                </div>
+            </div>
+        </section>
+    </header>
+    <!-- for the feature section main tag created in main there is section tag with id
+    feature and in section there is a div tag with class section-title in section-title
+    there is h2 tag which will desingned with the span tag with class highlight.
+    create two more <div> with class card and card-icon---->
+    <main class="container">
+        <section id="feature">
+            <div class="section-title">
+                <h2>Fea<span class="highlight">t</span>ure</h2>
+            </div>
+            <div class="feature">
+                <div class="card">
+                    <i class="card-icon fas fa-book-open"></i>
+                    <h3>Creative Story</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto nam quae voluptate ab ipsum.
+                        Molestias?</p>
+                    <a href="">Read More</a>
+                </div>
+                <div class="card">
+                    <i class="card-icon fas fa-video"></i>
+                    <h3>4k Support</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto nam quae voluptate ab ipsum.
+                        Molestias?</p>
+                    <a href="">Read More</a>
+                </div>
+                <div class="card">
+                    <i class="card-icon fas fa-star"></i>
+                    <h3>Super Quality</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto nam quae voluptate ab ipsum.
+                        Molestias?</p>
+                    <a href="">Read More</a>
+                </div>
+                <div class="card">
+                    <i class="card-icon fas fa-lock"></i>
+                    <h3>Highly Secured</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto nam quae voluptate ab ipsum.
+                        Molestias?</p>
+                    <a href="">Read More</a>
+                </div>
+            </div>
 
+        </section>
+    </main>
 </body>
 
 </html>
