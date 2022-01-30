@@ -163,3 +163,52 @@ the manues creat space between them  */
     text-decoration: none;
     color: #FF008E;
 }
+/*-------------- here starts the gallery section
+---------------------------------------------- */
+/* image in the gallery section arrange side by side and gap between them */
+.gallery{
+    display: grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+/* image size in the photo class adjusted according to the screen */
+.photo img{
+    width:100%;
+    height:200px;
+    object-fit: cover; /*if image is strees it will fit the cover*/
+    border:3px solid #FF008E;
+}
+
+/* ----------here starts the contact section
+-------------------------------------------- */
+/* make styles with contact part side by side and making gap between them */
+.contact{
+    display: grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+}
+.contact-left img{
+    width:100%;
+    }
+    /* contact form styling side by side and align items centre */
+.contact-right form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* text-field styling--width for screeen ratio size,margin, padding,font size,font-family:inherit for using same font-family used in the body */
+.text-field{
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 18px;
+    font-family: inherit;
+    outline:0;  /*for remove the outline around the form field*/
+    border:2px solid #FF008E;
+}
+footer{
+    height:50px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
