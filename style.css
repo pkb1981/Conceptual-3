@@ -163,6 +163,15 @@ the manues creat space between them  */
     text-decoration: none;
     color: #FF008E;
 }
+/* ------------here starts the about section
+---------------------------------------- */
+.about{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin:30px 0;
+    }
+    
+
 /*-------------- here starts the gallery section
 ---------------------------------------------- */
 /* image in the gallery section arrange side by side and gap between them */
@@ -211,4 +220,71 @@ footer{
     display:flex;
     align-items: center;
     justify-content: center;
+    margin-top: 30px;
+}
+/* to remove chenckbox by the bar icon use this id (nav-toggler) */
+#nav-toggler{
+    display: none;
+}
+.nav-toggler-icon{
+    display: none;
+}
+/* Responsive css starts here */
+/* @media(max-width:950px) used to make responsive sites whenever mobile screen resolation went under 950px then in galary section column 3 will be in column 2
+font-size if the banner heading will be small*/
+@media(max-width:950px){
+    .gallery{
+        grid-template-columns:repeat(2,1fr);          
+}
+.banner-left h1{
+    font-size: 35px;
+}
+}
+/*@media(max-width:800px) used to make responsive whenever screen resulation in maximum 
+800px then banner pic will be vertically aligned & changed banner picture position 
+from right to top and give some space between image and docks,all the images will be
+in a single column in feature gallery and contact, all images will be in middle positioned reduce the image quality by 350px.by nav-toggler-icon design the bar icon and by position-fixed--- fixed the menu items on the screen, change the menu item at lower level */
+@media(max-width:800px){
+    .banner{
+        grid-template-columns:1fr;      
+        height:fit-content;
+        
+    }
+    .banner-left{
+        order:2;
+        padding:50px 0;
+    }
+    .feature,.gallery,.about,.contact{
+        grid-template-columns: 1fr;
+    }
+    .photo{
+        text-align: center;
+    }
+    .photo img{
+    max-width: 350px;
+}
+    .nav-toggler-icon{
+        display:block;
+        color: #fff;
+        font-size: 30px;
+    }
+.navigation{
+    position:absolute;
+    top: 80px;
+    left: 0;
+    width:100%;
+    flex-direction: column;/*columnwise arrange the menu items*/
+    align-items: center;    /* centerly arranged the menu items*/
+    background-color: #fff;/*change the background color of the menu item*/
+    transform: translateY(-330px);/*remove the menu icon from the screen from top to out*/
+    transition: .5s ease-in-out;
+}
+.navigation li a{
+    color:black;   /*change the color of the menu items*/
+}
+/* nav-toggler id when will be checked then the class navigation will be called
+and by transform:translateY(0px) the menu will appear and disapear */
+#nav-toggler:checked~ .navigation{
+    transform: translateY(0px);
+}
 }
